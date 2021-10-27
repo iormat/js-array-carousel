@@ -31,16 +31,24 @@ main {
 }
 
 .item {
+    height: 320px;
     position: relative;
+    display: none;
 }
 
 .item.active {
     display: block;
 }
 
+.item img {
+    height: 100%;
+}
+
 img {
     width: 100%;
     display: block;
+    object-fit: cover;
+
 }
 
 .text {
@@ -53,18 +61,47 @@ img {
 }
 
 #thumbs {
-    width: 20%;
+    width: 17%;
     display: flex;
     flex-flow: column wrap;
-    height: 100%;
+    position: relative;
+    height: 320px;
+}
+
+.thumb {
+    height: calc(100% / 5);
 }
 
 .thumb img {
-    width: 81%;
     opacity: .5;
+    height: 100%;
 }
 
 .thumb.active img {
     opacity: 1;
-    border: 2px solid #c9c9c9;
+    border: 2px solid #f3f592;
+}
+
+#thumbs .arrow {
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    background-color: #cecece;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    box-shadow: inset 0 0 0 2px #9c9b9b;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.arrow.next {
+    bottom: 5px;
+    left: 30%;
+}
+
+.arrow.prev {
+    top: 5px;
+    left: 30%;
 }
