@@ -5,12 +5,6 @@
     box-sizing: border-box;
 }
 
-main:after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
 /* HEADER RULES -------------------- */
 header h1{
     background-color: #02021b;
@@ -48,7 +42,6 @@ img {
     width: 100%;
     display: block;
     object-fit: cover;
-
 }
 
 .text {

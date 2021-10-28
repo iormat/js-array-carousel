@@ -37,7 +37,7 @@ const prevThumb = document.querySelector(".arrow.prev");
 let item = "";
 let thumb = "";
 
-//cycles to get elements inside the html file
+//cycle to get elements inside the html file
 for(i = 0; i < items.length; i++) {
     
     item += `
@@ -56,8 +56,7 @@ for(i = 0; i < items.length; i++) {
         </div>`
 }
 
-
-//"create variables to get a pseudo array"
+//create variables to get a "pseudo array" from item and thumc
 let activePos = 0
 
 carousel.innerHTML += item;
@@ -67,7 +66,7 @@ thumbs.innerHTML += thumb;
 document.getElementsByClassName('thumb')[activePos].classList.toggle('active');
 
 
-//event to click arrows and change selected thumb and item
+//event to click arrow next and change selected thumb and item
 document.querySelector(".arrow.next").addEventListener('click',
 function(){
     if(activePos < 4){
@@ -87,7 +86,7 @@ function(){
     }
 })
 
-//event to click arrows and change selected thumb and item
+//event to click arrow prev and change selected thumb and item
 document.querySelector(".arrow.prev").addEventListener('click',
 function(){
     if(activePos > 0){
