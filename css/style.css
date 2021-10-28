@@ -89,19 +89,19 @@ img {
     width: 30px;
     background-color: #cecece;
     border-radius: 50%;
-    position: absolute;
-    z-index: 2;
     box-shadow: inset 0 0 0 2px #9c9b9b;
     border: 2px solid transparent;
     cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
 }
 
 .arrow.next {
-    bottom: 5px;
-    left: 30%;
+    top: 95%;
 }
 
 .arrow.prev {
-    top: 5px;
-    left: 30%;
+    bottom: 95%;
 }
